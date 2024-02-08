@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information</title>
+</head>
+<body>
+    <?php
+    $students = array(
+        array("name" => "Rani", "roll" => "BAM023"),
+        array("name" => "Venu", "roll" => "BAM024"),
+        array("name" => "Rohit", "roll" => "BAM025"),
+        array("name" => "Dona", "roll" => "BAM026"),
+        array("name" => "Sangeeth", "roll" => "BAM027")
+    );
+
+    for ($i = 0; $i < count($students); $i++) {
+        echo "Name: " . $students[$i]["name"] . "<br>";
+        echo "Roll Number: " . $students[$i]["roll"] . "<br>";
+
+        // Calculate grade using a switch statement based on student index
+        switch ($i) {
+            case 0:
+                echo "Grade: A<br>";
+                break;
+            case 1:
+                echo "Grade: B<br>";
+                break;
+            case 2:
+                echo "Grade: C<br>";
+                break;
+            case 3:
+                echo "Grade: A<br>";
+                break;
+            case 4:
+                echo "Grade: B<br>";
+                break;
+            default:
+                echo "Grade: Invalid<br>";
+        }
+
+        echo "<br>"; // Add a line break between students
+    }
+    ?>
+</body>
+</html>
+
